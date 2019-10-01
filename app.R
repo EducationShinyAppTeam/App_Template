@@ -1,10 +1,8 @@
 library(shiny)
 library(shinydashboard)
 
-# @todo
-pages <- list.files("pages", full.names = TRUE)
-lapply(pages, source)
-# @endtodo
+# Load app pages
+lapply(list.files("pages", full.names = TRUE), source)
 
 # Define UI for App
 ui <- list(
@@ -20,12 +18,12 @@ ui <- list(
       sidebarMenu(
         id = "tabs",
         menuItem("Overview", tabName = "Overview", icon = icon("dashboard")),
-        menuItem("Explore", tabName = "Explore", icon = icon("wpexplorer")), 
+        menuItem("Explore", tabName = "Explore", icon = icon("wpexplorer")) 
       )
     ),
     dashboardBody(
       tabItems(
-        Overview,
+        Overview
       )
     )
   )
@@ -33,7 +31,7 @@ ui <- list(
 
 # Define server logic
 server <- function(input, output) {
-
+  
 }
 
 # Create Shiny App
