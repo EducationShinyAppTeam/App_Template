@@ -1,10 +1,10 @@
-# Load dependencies and setup functions
+#' Load dependencies and setup functions
 source("global.R")
 
-# Define UI for App
+#' Define UI for App
 ui <- list(
   tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "https://educationshinyappteam.github.io/Style_Guide/theme/style.css")
+    tags$link(rel = "stylesheet", type = "text/css", href = "https://educationshinyappteam.github.io/Style_Guide/theme/boast.css")
   ),
   dashboardPage(
     skin = "blue",
@@ -21,6 +21,10 @@ ui <- list(
         menuItem("Overview", tabName = "Overview", icon = icon("dashboard")),
         menuItem("Explore", tabName = "Explore", icon = icon("wpexplorer")),
         menuItem("Challenge", tabName = "Challenge", icon = icon("gears"))
+      ),
+      tags$div(
+        class = "sidebar-logo",
+        psu_eberly_logo("reversed")
       )
     ),
     dashboardBody(
@@ -34,13 +38,13 @@ ui <- list(
   )
 )
 
-# Define server logic
+#' Define server logic
 server <- function(input, output, session) {
-  # Load any exported modules into the current session
+  #' Load any exported modules into the current session
   for(module in isolate(reactiveValuesToList(modules))){
     callModule(module, namespace)
   }
 }
 
-# Create Shiny App
+#' Create Shiny App
 shinyApp(ui = ui, server = server)

@@ -1,4 +1,4 @@
-# Shiny dashboard challenge tab item
+#' Shiny dashboard challenge tab item
 Challenge <- tabItem(
   tabName = "Challenge",
   titlePanel("PAGE_TITLE"),
@@ -14,12 +14,11 @@ Challenge <- tabItem(
   )
 )
 
-# Server logic for challenge page
-# @see @link{https://shiny.rstudio.com/articles/modules.html#using-renderui-within-modules}
+#' Server logic for challenge page
 challenge <- function(input, output, session) {
   observeEvent(input$obs, {
     output$plot <- renderPlot({
-      # Use isolate() to avoid dependency on input$obs
+      #' Use isolate() to avoid dependency on input$obs
       dist <- isolate(rnorm(input$obs))
       hist(dist)
     })
@@ -28,5 +27,5 @@ challenge <- function(input, output, session) {
   output$ui <- renderUI(plotOutput(ns("plot")))
 }
 
-# Export module
+#' Export module
 modules$challenge <- challenge

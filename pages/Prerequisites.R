@@ -1,4 +1,4 @@
-# Prerequisites tab content
+#' Prerequisites tab content
 Prerequisites <- tabItem(tabName = "Prerequisites",
   h2("Prerequisites"),
   tags$ul(

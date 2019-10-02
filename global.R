@@ -1,10 +1,13 @@
 library(shiny)
 library(shinydashboard)
 
-# Define modules object
-modules <- reactiveValues()
-namespace <- "app"
-ns <- NS(namespace)
+library(boastUtils)
 
-# Load app pages
+#' Define set namespace and define modules object
+#' @seealso \link{https://shiny.rstudio.com/articles/modules.html}
+namespace <- "app"
+ns        <- NS(namespace)
+modules   <- reactiveValues()
+
+#' Load app pages
 pages <- lapply(list.files("pages", full.names = TRUE), source)
