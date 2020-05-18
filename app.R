@@ -14,7 +14,7 @@ APP_DESCP  <<- paste(
 # End App Meta Data------------------------------------------------------------
 
 # Load additional dependencies and setup functions
-source("global.R")
+# source("global.R")
 
 # Define UI for App
 ui <- list(
