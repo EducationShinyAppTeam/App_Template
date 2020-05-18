@@ -82,7 +82,7 @@ ui <- list(
           ##### Create two lines of space
           br(),
           br(),
-          h2("Acknoledgements"),
+          h2("Acknowledgements"),
           p(
             "This version of the app was developed and coded by Neil J.
             Hatfield  and Robert P. Carey, III.",
