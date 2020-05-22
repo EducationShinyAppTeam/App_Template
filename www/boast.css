@@ -1,0 +1,847 @@
+/* Imports the Open Sans font family with two weights */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/* Penn State Colors */
+:root {
+	/*Blue Theme*/
+	--nittany-navy: 	#001E44;
+	--beaver-blue: 		#1E407C;
+	--pennsylvania-sky:	#009CDE;
+	--pugh-blue: 		#96BEE6;
+	/*Green Theme*/
+	--penn-forest:		#4A7729;
+	--green-opportunity: #008755;
+	--future-calling:	#99CC00;
+	/*Purple Theme*/
+	--stately-atherton:	#AC8DCE;
+	--perpetual-wonder:	#491D70;
+	--endless-potential: #000321;
+	/*Yellow Theme*/
+	--bright-keystone:	#FFD100;
+	--invent-orange:	#E98300;
+	--lion-roar:		#BF8226;
+	/*"Black" Theme*/
+	--creek:			#3EA39E;
+	--teal:				#69C9CB;
+	--slate:			#314D64;
+	/*Red Theme*/
+	--original-1887:	#BC204B;
+	--dawn-discovery:	#F2665E;
+	--land-grant:		#6A3028;
+}
+  
+/*Core Text Display Elements*/
+html {
+	font-size: 1rem; /* 10px => 16px */
+}
+
+body {
+	font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Segoe UI Symbol";
+	font-weight: 400;
+	font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	margin-top: 0;
+  	margin-bottom: 0.5rem;
+	font-weight: 400;
+}
+
+h1, .h1 {
+	font-size: 2.5rem;
+}
+
+h2, .h2 {
+	font-size: 2rem;
+}
+
+h3, .h3 {
+	font-size: 1.75rem;
+}
+
+h4, .h4 {
+	font-size: 1.5rem;
+}
+
+h5, .h5 {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+h6, .h6 {
+	font-size: 1rem;
+}
+
+.main-header .sidebar-toggle {
+	padding: 0.8rem 1.2rem;
+}
+
+.sidebar {
+	width: 100%;
+}
+
+.main-sidebar, .sidebar {
+	display: flex;
+}
+
+.sidebar {
+	flex-direction: column;
+	flex: 1 0 auto;
+	justify-content: space-between;
+}
+
+.skin-blue .main-sidebar {
+	background-color: var(--beaver-blue) !important;
+}
+
+.skin-green .main-sidebar {
+	background-color: var(--green-opportunity) !important;
+}
+
+.skin-purple .main-sidebar {
+	background-color: var(--perpetual-wonder) !important;
+}
+
+.skin-yellow .main-sidebar {
+	background-color: var(--invent-orange) !important;
+}
+
+.skin-black .main-sidebar {
+	background-color: var(--creek) !important;
+}
+
+.skin-red .main-sidebar {
+	background-color: var(--original-1887) !important;
+}
+
+.sidebar-menu {
+	flex-direction: column;
+	flex: 1 0 auto;
+	justify-content: space-between;
+}
+
+.sidebar-logo {
+	padding: 0.25rem 0.5rem;
+}
+
+.updated {
+	font-size: 75%;
+	font-weight: 400;
+	text-align: center;
+}
+
+.hangingindent {
+	padding-left: 48px;
+	text-indent:  -48px;
+}
+
+/*Non-title portion of dashboard header*/
+.skin-blue .main-header>.navbar {
+	background-color: var(--beaver-blue);
+	color: black;
+}
+
+.skin-green .main-header>.navbar {
+	background-color: var(--green-opportunity) !important;
+}
+
+.skin-purple .main-header>.navbar {
+	background-color: var(--perpetual-wonder) !important;
+}
+
+.skin-yellow .main-header>.navbar {
+	background-color: var(--invent-orange) !important;
+}
+
+.skin-black .main-header>.navbar {
+	background-color: var(--creek) !important;
+}
+
+.skin-red .main-header>.navbar {
+	background-color: var(--original-1887) !important;
+}
+
+/*Background of Main Text Area*/
+.content-wrapper,
+.right-side {
+	background-color: white;
+	/*Override requires the !important tag*/
+}
+
+/*Title portion of dashboard header*/
+.skin-blue .main-header .logo {
+	background-color: var(--beaver-blue);
+	color: white;
+}
+
+.skin-green .main-header .logo {
+	background-color: var(--green-opportunity);
+	color: white;
+}
+
+.skin-purple .main-header .logo {
+	background-color: var(--perpetual-wonder);
+	color: white;
+}
+
+.skin-yellow .main-header .logo {
+	background-color: var(--invent-orange);
+	color: white;
+}
+
+.skin-black .main-header .logo {
+	background-color: var(--creek);
+	color: black;
+}
+
+.skin-red .main-header .logo {
+	background-color: var(--original-1887);
+	color: white;
+}
+
+/*Title Portion Hover Color*/
+.skin-blue .main-header .logo:hover {
+	background-color: var(--beaver-blue);
+}
+
+.skin-green .main-header .logo:hover {
+	background-color: var(--green-opportunity);
+}
+
+.skin-purple .main-header .logo:hover {
+	background-color: var(--perpetual-wonder);
+}
+
+.skin-yellow .main-header .logo:hover {
+	background-color: var(--invent-orange);
+}
+
+.skin-black .main-header .logo:hover {
+	background-color: var(--creek);
+}
+
+.skin-red .main-header .logo:hover {
+	background-color: var(--original-1887);
+}
+
+.skin-blue .main-header .sidebar-toggle:hover {
+	background: var(--pennsylvania-sky) !important;
+}
+
+.skin-green .main-header .sidebar-toggle:hover {
+	background: var(--future-calling) !important;
+}
+
+.skin-purple .main-header .sidebar-toggle:hover {
+	background: var(--stately-atherton) !important;
+}
+
+.skin-yellow .main-header .sidebar-toggle:hover {
+	background: var(--bright-keystone) !important;
+}
+
+.skin-black .main-header .sidebar-toggle:hover {
+	background: var(--teal) !important;
+}
+
+.skin-red .main-header .sidebar-toggle:hover {
+	background: var(--original-1887) !important;
+}
+
+
+/*Font Control for Dashboard Title*/
+.main-header .logo {
+	/* Default is White; to overide use -> color: #f39c12 !important; */
+}
+
+.skin-blue .sidebar a {
+	color: white;
+}
+
+.skin-green .sidebar a {
+	color: white;
+}
+
+.skin-purple .sidebar a {
+	color: white;
+}
+
+.skin-yellow .sidebar a {
+	color: white;
+}
+
+.skin-black .sidebar a {
+	color: black;
+}
+
+.skin-red .sidebar a {
+	color: white;
+}
+
+.sidebar-picture {
+	position: fixed;
+	bottom: 0;
+}
+
+.skin-blue .sidebar-menu li.active a,
+.skin-blue .sidebar-menu li:hover a {
+	background: var(--pennsylvania-sky);
+	color: black;
+	border-left-color: var(--pugh-blue);
+}
+
+.skin-green .sidebar-menu li.active a,
+.skin-green .sidebar-menu li:hover a {
+	background: var(--future-calling);
+	color: black;
+	border-left-color: var(--penn-forest);
+}
+
+.skin-purple .sidebar-menu li.active a,
+.skin-purple .sidebar-menu li:hover a {
+	background: var(--stately-atherton);
+	color: black;
+	border-left-color: var(--endless-potential);
+}
+
+.skin-yellow .sidebar-menu li.active a,
+.skin-yellow .sidebar-menu li:hover a {
+	background: var(--bright-keystone);
+	color: black;
+	border-left-color: var(--lion-roar);
+}
+
+.skin-black .sidebar-menu li.active a,
+.skin-black .sidebar-menu li:hover a {
+	background: var(--teal);
+	color: black;
+	border-left-color: var(--slate);
+}
+
+.skin-red .sidebar-menu li.active a,
+.skin-red .sidebar-menu li:hover a {
+	background: var(--dawn-discovery);
+	color: black;
+	border-left-color: var(--land-grant);
+}
+
+/*Button Appearance*/
+.skin-blue .btn-default {
+	background-color: var(--beaver-blue);
+	color: white;
+}
+
+.skin-green .btn-default {
+	background-color: var(--green-opportunity);
+	color: white;
+}
+
+.skin-purple .btn-default {
+	background-color: var(--perpetual-wonder);
+	color: white;
+}
+
+.skin-yellow .btn-default {
+	background-color: var(--invent-orange);
+	color: white;
+}
+
+.skin-black .btn-default {
+	background-color: var(--creek);
+	color: black;
+}
+
+.skin-red .btn-default {
+	background-color: var(--original-1887);
+	color: white;
+}
+
+.btn-game {
+	background-color:  white;
+	color: black;
+	font-size: 1.5rem;
+	text-align: left;
+}
+
+.btn-textGame {
+	background-color:  white;
+	color: black;
+	font-size: 1.1rem;
+	text-align: left;
+	white-space: normal;
+	overflow-wrap: break-word;
+}
+
+/*Hovertext/Rollover/Popover Title Controls*/
+/*.popover-title {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1em;
+	color: black;
+	text-align: center;
+} */
+
+.skin-blue .popover-title {
+	background-color: var(--pennsylvania-sky);
+}
+
+.skin-green .popover-title {
+	background-color: var(--future-calling);
+}
+
+.skin-purple .popover-title {
+	background-color: var(--stately-atherton);
+}
+
+.skin-yellow .popover-title {
+	background-color: var(--bright-keystone);
+}
+
+.skin-black .popover-title {
+	background-color: var(--teal);
+}
+
+.skin-red .popover-title {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 1em;
+	color: black;
+	text-align: center;
+	background-color: var(--original-1887);
+}
+
+/*Hovertext/Rollover/Popover content Controls*/
+.popover-content {
+	background-color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: black;
+}
+
+label {
+	font: 100% 'Open Sans';
+	font-weight: 400 !important;
+}
+
+/*Slider Controls; note that .js-irs-# can be appended in front of the following to
+create customized appearances. This is NOT recommended.*/
+
+/*Ends of Slider Bar*/
+.skin-blue .irs-bar-edge {
+	border-color: var(--beaver-blue);
+	background: var(--pennsylvania-sky);
+}
+
+.skin-green .irs-bar-edge {
+	border-color: var(--green-opportunity);
+	background: var(--future-calling);
+}
+
+.skin-purple .irs-bar-edge {
+	border-color: var(--perpetual-wonder);
+	background: var(--stately-atherton);
+}
+
+.skin-yellow .irs-bar-edge {
+	border-color: var(--invent-orange);
+	background: var(--bright-keystone);
+}
+
+.skin-black .irs-bar-edge {
+	border-color: var(--creek);
+	background: var(--teal);
+}
+
+.skin-red .irs-bar-edge {
+	border-color: var(--original-1887);
+	background: var(--dawn-discovery);
+}
+
+/*Middle Portion of Slider Bar*/
+.skin-blue .irs-bar {
+	border-top-color: var(--beaver-blue);
+	border-bottom-color: var(--beaver-blue);
+	background: var(--pennsylvania-sky);
+	color: black;
+}
+
+.skin-green .irs-bar {
+	border-top-color: var(--green-opportunity);
+	border-bottom-color: var(--green-opportunity);
+	background: var(--future-calling);
+	color: black;
+}
+
+.skin-purple .irs-bar {
+	border-top-color: var(--perpetual-wonder);
+	border-bottom-color: var(--perpetual-wonder);
+	background: var(--stately-atherton);
+	color: black;
+}
+
+.skin-yellow .irs-bar {
+	border-top-color: var(--invent-orange);
+	border-bottom-color: var(--invent-orange);
+	background: var(--bright-keystone);
+	color: black;
+}
+
+.skin-black .irs-bar {
+	border-top-color: var(--creek);
+	border-bottom-color: var(--creek);
+	background: var(--teal);
+	color: black;
+}
+
+.skin-red .irs-bar {
+	border-top-color: var(--original-1887);
+	border-bottom-color: var(--original-1887);
+	background: var(--dawn-discovery);
+	color: black;
+}
+
+/*Slider edges*/
+.irs-line {
+	border: 1px solid black;
+}
+
+/*Slider major tick marks*/
+.irs-grid-pol {
+	width: 1px;
+	height: 0.5rem;
+	background: black;
+}
+
+/*Slider minor tick marks*/
+.irs-grid-pol.small {
+	width: 1px;
+	height: 0.25rem;
+	background: black;
+}
+
+/*Slider Icon*/
+.irs-slider {
+	width: 0.5rem;
+	height: 1.25rem;
+	top: 1.1875rem;
+}
+
+/*Slider Text bubble*/
+.irs-single {
+	font-weight: 700;
+	font-size: 0.875rem;
+	color: black;
+	padding: 0.1rem 0.4rem;
+	margin-top: -4px;
+}
+
+.skin-blue .irs-single {
+	background: var(--pugh-blue);
+}
+
+.sking-green .irs-single {
+	background: var(--future-calling);
+}
+
+.skin-purple .irs-single {
+	background: var(--stately-atherton);
+}
+
+.skin-yellow .irs-single {
+	background: var(--bright-keystone);
+}
+
+.skin-black .irs-single {
+	background: var(--teal);
+}
+
+.skin-red .irs-single {
+	background: var(--dawn-discovery);
+}
+
+/*Slider Text controls*/
+.irs-min, .irs-max {
+	padding: 0.1rem 0.4rem;
+}
+
+.irs-grid-text,
+.irs-min,
+.irs-max {
+	font-size: 0.875rem;
+	color: black;
+	background: white;
+}
+
+/*Sweet Alert controls*/
+.sweet-alert h2, .sweet-alert p {
+	color: black !important;
+}
+
+.skin-blue .sweet-alert button {
+	background-color: var(--beaver-blue) !important;
+	color: white;
+}
+
+.skin-green .sweet-alert button {
+	background-color: var(--green-opportunity) !important;
+	color: white;
+}
+
+.skin-purple .sweet-alert button {
+	background-color: var(--perpetual-wonder) !important;
+	color: white;
+}
+
+.skin-yellow .sweet-alert button {
+	background-color: var(--invent-orange) !important;
+	color: white;
+}
+
+.skin-black .sweet-alert button {
+	background-color: var(--creek) !important;
+	color: white;
+}
+
+.skin-red .sweet-alert button {
+	background-color: var(--original-1887) !important;
+	color: white;
+}
+
+.skin-blue .sweet-alert input {
+	border: 1pt solid var(--beaver-blue) !important;
+}
+
+.skin-green .sweet-alert input {
+	border: 1pt solid var(--green-opportunity) !important;
+}
+
+.skin-purple .sweet-alert input {
+	border: 1pt solid var(--perpetual-wonder) !important;
+}
+
+.skin-yellow .sweet-alert input {
+	border: 1pt solid var(--invent-orange) !important;
+}
+
+.skin-black .sweet-alert input {
+	border: 1pt solid var(--teal) !important;
+}
+
+.skin-red .sweet-alert input {
+	border: 1pt solid var(--dawn-discovery) !important;
+}
+
+/*Collapsable Box Style Controls*/
+/*This needs updating for color schemes*/
+.skin-blue box, .skin-blue .box,
+.skin-blue box-primary, .skin-blue .box-primary,
+.skin-blue .box box-primary, .skin-blue .box.box-primary {
+	border-top-color: var(--pennsylvania-sky);
+}
+
+.skin-green box, .skin-green .box,
+.skin-green box-primary, .skin-green .box-primary,
+.skin-green .box box-primary, .skin-green .box.box-primary {
+	border-top-color: var(--future-calling);
+}
+
+.skin-purple box, .skin-purple .box,
+.skin-purple box-primary, .skin-purple .box-primary,
+.skin-purple .box box-primary, .skin-purple .box.box-primary {
+	border-top-color: var(--stately-atherton);
+}
+
+.skin-yellow box, .skin-yellow .box,
+.skin-yellow box-primary, .skin-yellow .box-primary,
+.skin-yellow .box box-primary, .skin-yellow .box.box-primary {
+	border-top-color: var(--bright-keystone);
+}
+
+.skin-black box, .skin-black .box,
+.skin-black box-primary, .skin-black .box-primary,
+.skin-black .box box-primary, .skin-black .box.box-primary {
+	border-top-color: var(--teal);
+}
+
+.skin-red box, .skin-red .box,
+.skin-red box-primary, .skin-red .box-primary,
+.skin-red .box box-primary, .skin-red .box.box-primary {
+	border-top-color: var(--dawn-discovery);
+}
+
+/* Grid-based Game Layouts */
+.game-board {
+  position: relative;
+  min-height: 425px;
+}
+
+.grid-fill {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-tile {
+  position: relative;
+  padding-top: 100%;
+}
+
+.grid-tile button {
+  border-radius: 0;
+  font-size: 3.75rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.skin-blue .grid-tile button {
+  border: 0.25rem solid var(--nittany-navy);
+}
+
+.skin-green .grid-tile button {
+  border: 0.25rem solid var(--penn-forest);
+}
+
+.skin-purple .grid-tile button {
+  border: 0.25rem solid var(--endless-potential);
+}
+
+.skin-yellow .grid-tile button {
+  border: 0.25rem solid var(--lion-roar);
+}
+
+.skin-black .grid-tile button {
+  border: 0.25rem solid var(--slate);
+}
+
+.skin-blue .grid-tile button:active, 
+.skin-blue .grid-tile button:hover {
+  background-color: var(--pennsylvania-sky);
+}
+
+.skin-green .grid-tile button:active,
+.skin-green .grid-tile button:hover {
+  background-color: var(--future-calling);
+}
+
+.skin-purple .grid-tile button:active,
+.skin-purple .grid-tile button:hover {
+  background-color: var(--stately-atherton);
+}
+
+.skin-yellow .grid-tile button:active,
+.skin-yellow .grid-tile button:hover {
+  background-color: var(--bright-keystone);
+}
+
+.skin-black .grid-tile button:active,
+.skin-black .grid-tile button:hover {
+  background-color: var(--teal);
+}
+
+.skin-red .grid-tile button:active,
+.skin-red .grid-tile button:hover {
+  background-color: var(--dawn-discovery);
+}
+
+.grid-tile button:hover {
+  color: black;
+}
+
+.grid-tile button[disabled] {
+  opacity: 1;
+}
+
+.skin-blue .grid-tile button[disabled]:hover {
+  background-color: var(--beaver-blue);
+  color: white;
+}
+
+.skin-green .grid-tile button[disabled]:hover {
+  background-color: var(--green-opportunity);
+  color: white;
+}
+
+.skin-purple .grid-tile button[disabled]:hover {
+  background-color: var(--perpetual-wonder);
+  color: white;
+}
+
+.skin-yellow .grid-tile button[disabled]:hover {
+  background-color: var(--invent-orange);
+  color: white;
+}
+
+.skin-black .grid-tile button[disabled]:hover {
+  background-color: var(--creek);
+  color: white;
+}
+
+.skin-red .grid-tile button[disabled]:hover {
+  background-color: var(--original-1887);
+  color: white;
+}
+
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0;
+
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+
+  border-radius: 0.5rem;
+}
+
+.skin-blue .grid-board {
+  background-color: var(--beaver-blue);
+  border: 0.25rem solid var(--nittany-navy); 
+}
+
+.skin-green .grid-board {
+  background-color: var(--green-opportunity);
+  border: 0.25rem solid var(--penn-forest); 
+}
+
+.skin-purple .grid-board {
+  background-color: var(--perpetual-wonder);
+  border: 0.25rem solid var(--endless-potential); 
+}
+
+.skin-yellow .grid-board {
+  background-color: var(--invent-orange);
+  border: 0.25rem solid var(--lion-roar); 
+}
+
+.skin-black .grid-board {
+  background-color: var(--creek);
+  border: 0.25rem solid var(--slate); 
+}
+
+.skin-red .grid-board {
+  background-color: var(--original-1887);
+  border: 0.25rem solid var(--land-grant); 
+}
+
+.grid-1x1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-2x2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-4x4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5x5 {
+  grid-template-columns: repeat(5, 1fr);
+}
