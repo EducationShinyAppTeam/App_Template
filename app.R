@@ -394,4 +394,5 @@ server <- function(input, output, session) {
 }
 
 # Create Shiny App using BOAST App template
-shinyApp(ui = ui, server = server)
+ boastApp(ui = ui, server = server)
+# shinyApp(ui = ui, server = server) # For testing purposes only
