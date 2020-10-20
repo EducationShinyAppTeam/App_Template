@@ -18,11 +18,6 @@ APP_DESCP  <<- paste(
 
 # Define UI for App
 ui <- list(
-  tags$head(
-    tags$link(rel = "stylesheet", type = "text/css",
-    href = "https://educationshinyappteam.github.io/Style_Guide/theme/boast.css")
-    #href = "boast.css") ## This is for Neil's testing purposes
-  ),
   ## Create the app page
   dashboardPage(
     skin = "blue",
