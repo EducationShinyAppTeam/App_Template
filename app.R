@@ -35,7 +35,7 @@ ui <- list(
     ### Create the sidebar/left navigation menu
     dashboardSidebar(
       sidebarMenu(
-        id = "tabs",
+        id = "pages",
         menuItem("Overview", tabName = "Overview", icon = icon("dashboard")),
         menuItem("Prerequisites", tabName = "Prerequisites", icon = icon("book")),
         menuItem("Explore", tabName = "Explore", icon = icon("wpexplorer")),
