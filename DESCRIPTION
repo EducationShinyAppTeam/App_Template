@@ -11,6 +11,6 @@ LearningObjectives: The student is expected to learn about xyz and the effects o
 DisplayMode: Normal
 URL: https://psu-eberly.shinyapps.io/Sample_App
 BugReports: https://github.com/EducationShinyAppTeam/Sample_App/issues
-License: CC BY-NC-SA 4.0
+License: CC-BY-NC-SA-4.0
 Tags: simulation
 Type: Shiny
