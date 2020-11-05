@@ -2,7 +2,7 @@ Title: Sample App - A Lengthy Title
 ShortName: Sample App
 Date: 2020-12-31
 Authors@R: c(
-    person("Lorem", "Ipsum", email = "lorem.ipsum@psu.edu", role = c("aut", "cre"))
+    person("Lorem", "Ipsum", email = "lorem.ipsum@psu.edu", role = c("aut", "cre")),
     person("Ang", "Li", email = "ang.li@psu.edu", role = c("ctb"))
   )
 Chapter: Sample Chapter
