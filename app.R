@@ -3,14 +3,6 @@ library(shiny)
 library(shinyBS)
 library(boastUtils)
 
-# App Meta Data----------------------------------------------------------------
-APP_TITLE  <<- "[App Template]"
-APP_DESCP  <<- paste(
-  "Description of the app",
-  "use multiple lines to keep the description legible."
-)
-# End App Meta Data------------------------------------------------------------
-
 # Load additional dependencies and setup functions
 # source("global.R")
 
