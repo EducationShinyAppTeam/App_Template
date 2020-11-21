@@ -7,7 +7,10 @@ Authors@R: c(
   )
 Chapter: Sample Chapter
 Description: This app is focused on the common types of xyz.
-LearningObjectives: The student is expected to learn about xyz and the effects of abc.
+LearningObjectives: c(
+    "The student will learn to understand Concept A in way z.",
+    "The student will learn to understand Concept B as description y."
+  )
 DisplayMode: Normal
 URL: https://psu-eberly.shinyapps.io/Sample_App
 BugReports: https://github.com/EducationShinyAppTeam/Sample_App/issues
