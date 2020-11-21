@@ -2,8 +2,8 @@ Title: Sample App - A Lengthy Title
 ShortName: Sample App
 Date: 2020-12-31
 Authors@R: c(
-    person("Lorem", "Ipsum", email = "lorem.ipsum@psu.edu", role = c("aut", "cre")),
-    person("Ang", "Li", email = "ang.li@psu.edu", role = c("ctb"))
+    person(given = "Lorem", family = "Ipsum", email = "lorem.ipsum@psu.edu", role = c("aut", "cre")),
+    person(given = "Ang", family = "Li", email = "ang.li@psu.edu", role = c("ctb"))
   )
 Chapter: Sample Chapter
 Description: This app is focused on the common types of xyz.
