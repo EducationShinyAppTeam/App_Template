@@ -1,6 +1,7 @@
 Title: Sample App - A Lengthy Title
 ShortName: Sample App
 Date: 2020-12-31
+Lifecycle: experimental
 Authors@R: c(
     person(given = "Lorem", family = "Ipsum", email = "lorem.ipsum@psu.edu", role = c("aut", "cre")),
     person(given = "Ang", family = "Li", email = "ang.li@psu.edu", role = c("ctb"))
