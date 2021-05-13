@@ -1,4 +1,4 @@
-# Load Packages
+# Load Packages ----
 library(shiny)
 library(shinydashboard)
 library(shinyBS)
@@ -189,7 +189,7 @@ ui <- list(
 
 # Define server logic ----
 server <- function(input, output, session) {
-  
+
 }
 
 # Boast App Call ----
