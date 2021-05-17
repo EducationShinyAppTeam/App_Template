@@ -16,24 +16,30 @@ ui <- list(
     ### Create the app header ----
     dashboardHeader(
       title = "App Template", # You may use a shortened form of the title here
+      titleWidth = 250,
       tags$li(class = "dropdown", actionLink("info", icon("info"))),
-      tags$li(class = "dropdown",
-              tags$a(href='https://github.com/EducationShinyAppTeam/BOAST',
-                     icon("github"))),
-      tags$li(class = "dropdown",
-              tags$a(href='https://shinyapps.science.psu.edu/',
-                     icon("home")))
+      tags$li(
+        class = "dropdown",
+        boastUtils::surveyLink(name = "App_Template")
+      ),
+      tags$li(
+        class = "dropdown",
+        tags$a(href = 'https://shinyapps.science.psu.edu/',
+               icon("home")
+        )
+      )
     ),
     ### Create the sidebar/left navigation menu ----
     dashboardSidebar(
       sidebarMenu(
         id = "pages",
-        menuItem("Overview", tabName = "Overview", icon = icon("dashboard")),
-        menuItem("Prerequisites", tabName = "Prerequisites", icon = icon("book")),
-        menuItem("Explore", tabName = "Explore", icon = icon("wpexplorer")),
-        menuItem("Challenge", tabName = "Challenge", icon = icon("gears")),
-        menuItem("Game", tabName = "Game", icon = icon("gamepad")),
-        menuItem("References", tabName = "References", icon = icon("leanpub"))
+        menuItem("Overview", tabName = "overview", icon = icon("dashboard")),
+        menuItem("Prerequisites", tabName = "prerequisites", icon = icon("book")),
+        menuItem("Explore", tabName = "explore", icon = icon("wpexplorer")),
+        menuItem("Challenge", tabName = "challenge", icon = icon("gears")),
+        menuItem("Game", tabName = "game", icon = icon("gamepad")),
+        menuItem("Wizard", tabName = "wizard", icon = icon("hat-wizard")),
+        menuItem("References", tabName = "references", icon = icon("leanpub"))
       ),
       tags$div(
         class = "sidebar-logo",
@@ -45,7 +51,7 @@ ui <- list(
       tabItems(
         #### Set up the Overview Page ----
         tabItem(
-          tabName = "Overview",
+          tabName = "overview",
           withMathJax(),
           h1("Sample Application for BOAST Apps"), # This should be the full name.
           p("This is a sample Shiny application for BOAST."),
@@ -81,12 +87,12 @@ ui <- list(
             br(),
             br(),
             br(),
-            div(class = "updated", "Last Update: 5/13/2020 by NJH.")
+            div(class = "updated", "Last Update: 5/14/2021 by NJH.")
           )
         ),
         #### Set up the Prerequisites Page ----
         tabItem(
-          tabName = "Prerequisites",
+          tabName = "prerequisites",
           withMathJax(),
           h2("Prerequisites"),
           p("In order to get the most out of this app, please review the
@@ -138,7 +144,7 @@ ui <- list(
         #### will be up to you and the goals for your app.
         #### Set up an Explore Page
         tabItem(
-          tabName = "Explore",
+          tabName = "explore",
           withMathJax(),
           h2("Explore the Concept"),
           p("This page should include something for the user to do, the more
@@ -150,7 +156,7 @@ ui <- list(
         ),
         #### Set up a Challenge Page ----
         tabItem(
-          tabName = "Challenge",
+          tabName = "challenge",
           withMathJax(),
           h2("Challenge Yourself"),
           p("The general intent of a Challenge page is to have the user take
@@ -163,7 +169,7 @@ ui <- list(
         ),
         #### Set up a Game Page ----
         tabItem(
-          tabName = "Game",
+          tabName = "game",
           withMathJax(),
           h2("Practice/Test Yourself with [Type of Game]"),
           p("On this type of tab, you'll set up a game for the user to play.
@@ -172,7 +178,7 @@ ui <- list(
         ),
         #### Set up the References Page ----
         tabItem(
-          tabName = "References",
+          tabName = "references",
           withMathJax(),
           h2("References"),
           p(
