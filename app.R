@@ -31,6 +31,7 @@ ui <- list(
     ),
     ### Create the sidebar/left navigation menu ----
     dashboardSidebar(
+      width = 250,
       sidebarMenu(
         id = "pages",
         menuItem("Overview", tabName = "overview", icon = icon("dashboard")),
@@ -68,7 +69,7 @@ ui <- list(
           ),
           ##### Go Button--location will depend on your goals ----
           div(
-            style = "text-align: center",
+            style = "text-align: center;",
             bsButton(
               inputId = "go1",
               label = "GO!",
@@ -217,6 +218,7 @@ ui <- list(
 
 # Define server logic ----
 server <- function(input, output, session) {
+
   ## Set up Info button ----
   observeEvent(
     eventExpr = input$info,
@@ -229,6 +231,7 @@ server <- function(input, output, session) {
       )
     }
   )
+
 }
 
 # Boast App Call ----
