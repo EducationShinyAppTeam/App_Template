@@ -33,7 +33,7 @@ ui <- list(
     dashboardSidebar(
       sidebarMenu(
         id = "pages",
-        menuItem("Overview", tabName = "overview", icon = icon("dashboard")),
+        menuItem("Overview", tabName = "overview", icon = icon("tachometer_alt")),
         menuItem("Prerequisites", tabName = "prerequisites", icon = icon("book")),
         menuItem("Explore", tabName = "explore", icon = icon("wpexplorer")),
         menuItem("Challenge", tabName = "challenge", icon = icon("gears")),
@@ -86,8 +86,12 @@ ui <- list(
             Students.",
             br(),
             br(),
+            "Cite this app as:",
             br(),
-            div(class = "updated", "Last Update: 5/14/2021 by NJH.")
+            citeApp(),
+            br(),
+            br(),
+            div(class = "updated", "Last Update: 5/19/2022 by NJH.")
           )
         ),
         #### Set up the Prerequisites Page ----
