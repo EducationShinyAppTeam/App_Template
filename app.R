@@ -31,6 +31,7 @@ ui <- list(
     ),
     ### Create the sidebar/left navigation menu ----
     dashboardSidebar(
+      width = 250,
       sidebarMenu(
         id = "pages",
         menuItem("Overview", tabName = "overview", icon = icon("tachometer_alt")),
@@ -54,7 +55,10 @@ ui <- list(
           tabName = "overview",
           withMathJax(),
           h1("Sample Application for BOAST Apps"), # This should be the full name.
-          p("This is a sample Shiny application for BOAST."),
+          p("This is a sample Shiny application for BOAST. Remember, this page
+            will act like the front page (home page) of your app. Thus you will
+            want to have this page catch attention and describe (in general terms)
+            what the user can do in the rest of the app."),
           h2("Instructions"),
           p("This information will change depending on what you want to do."),
           tags$ol(
@@ -65,7 +69,7 @@ ui <- list(
           ),
           ##### Go Button--location will depend on your goals
           div(
-            style = "text-align: center",
+            style = "text-align: center;",
             bsButton(
               inputId = "go1",
               label = "GO!",
@@ -102,8 +106,11 @@ ui <- list(
           p("In order to get the most out of this app, please review the
             following:"),
           tags$ul(
-            tags$li("Pre-req 1"),
-            tags$li("Pre-req 2"),
+            tags$li("Pre-req 1--Technical/Conceptual Prerequisites are ideas that
+                    users need to have in order to engage with your app fully."),
+            tags$li("Pre-req 2--Contextual Prerequisites refer to any information
+                    about a context in your app that will enrich a user's
+                    understandings."),
             tags$li("Pre-req 3"),
             tags$li("Pre-req 4")
           ),
@@ -176,21 +183,37 @@ ui <- list(
           tabName = "game",
           withMathJax(),
           h2("Practice/Test Yourself with [Type of Game]"),
-          p("On this type of tab, you'll set up a game for the user to play.
+          p("On this type of page, you'll set up a game for the user to play.
             Game types include Tic-Tac-Toe, Matching, and a version Hangman to
             name a few. If you have ideas for new game type, please let us know.")
+        ),
+        #### Set up a Wizard Page ----
+        tabItem(
+          tabName = "wizard",
+          withMathJax(),
+          h2("Wizard"),
+          p("This page will have a series of inputs and questions for the user to
+            answer/work through in order to have the app create something. These
+            types of Activity pages are currently rare as we try to avoid
+            creating 'calculators' in the BOAST project.")
         ),
         #### Set up the References Page ----
         tabItem(
           tabName = "references",
           withMathJax(),
           h2("References"),
+          p("You'll need to fill in this page with all of the appropriate
+            references for your app."),
           p(
             class = "hangingindent",
             "Bailey, E. (2015). shinyBS: Twitter bootstrap components for shiny.
             (v0.61). [R package]. Available from
             https://CRAN.R-project.org/package=shinyBS"
           ),
+          br(),
+          br(),
+          br(),
+          boastUtils::copyrightInfo()
         )
       )
     )
@@ -199,6 +222,19 @@ ui <- list(
 
 # Define server logic ----
 server <- function(input, output, session) {
+
+  ## Set up Info button ----
+  observeEvent(
+    eventExpr = input$info,
+    handlerExpr = {
+      sendSweetAlert(
+        session = session,
+        type = "info",
+        title = "Information",
+        text = "This App Template will help you get started building your own app"
+      )
+    }
+  )
 
 }
 
