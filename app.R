@@ -63,7 +63,7 @@ ui <- list(
             tags$li("Challenge yourself."),
             tags$li("Play the game to test how far you've come.")
           ),
-          ##### Go Button--location will depend on your goals ----
+          ##### Go Button--location will depend on your goals
           div(
             style = "text-align: center",
             bsButton(
@@ -74,7 +74,7 @@ ui <- list(
               style = "default"
             )
           ),
-          ##### Create two lines of space ----
+          ##### Create two lines of space
           br(),
           br(),
           h2("Acknowledgements"),
@@ -146,7 +146,7 @@ ui <- list(
         #### Note: you must have at least one of the following pages. You might
         #### have more than one type and/or more than one of the same type. This
         #### will be up to you and the goals for your app.
-        #### Set up an Explore Page
+        #### Set up an Explore Page ----
         tabItem(
           tabName = "explore",
           withMathJax(),
