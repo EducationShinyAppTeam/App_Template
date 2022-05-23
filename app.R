@@ -34,7 +34,7 @@ ui <- list(
       width = 250,
       sidebarMenu(
         id = "pages",
-        menuItem("Overview", tabName = "overview", icon = icon("dashboard")),
+        menuItem("Overview", tabName = "overview", icon = icon("tachometer_alt")),
         menuItem("Prerequisites", tabName = "prerequisites", icon = icon("book")),
         menuItem("Explore", tabName = "explore", icon = icon("wpexplorer")),
         menuItem("Challenge", tabName = "challenge", icon = icon("gears")),
@@ -67,7 +67,7 @@ ui <- list(
             tags$li("Challenge yourself."),
             tags$li("Play the game to test how far you've come.")
           ),
-          ##### Go Button--location will depend on your goals ----
+          ##### Go Button--location will depend on your goals
           div(
             style = "text-align: center;",
             bsButton(
@@ -78,7 +78,7 @@ ui <- list(
               style = "default"
             )
           ),
-          ##### Create two lines of space ----
+          ##### Create two lines of space
           br(),
           br(),
           h2("Acknowledgements"),
@@ -90,8 +90,12 @@ ui <- list(
             Students.",
             br(),
             br(),
+            "Cite this app as:",
             br(),
-            div(class = "updated", "Last Update: 5/19/2021 by NJH.")
+            citeApp(),
+            br(),
+            br(),
+            div(class = "updated", "Last Update: 5/19/2022 by NJH.")
           )
         ),
         #### Set up the Prerequisites Page ----
@@ -149,7 +153,7 @@ ui <- list(
         #### Note: you must have at least one of the following pages. You might
         #### have more than one type and/or more than one of the same type. This
         #### will be up to you and the goals for your app.
-        #### Set up an Explore Page
+        #### Set up an Explore Page ----
         tabItem(
           tabName = "explore",
           withMathJax(),
