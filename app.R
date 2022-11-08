@@ -25,7 +25,7 @@ ui <- list(
       tags$li(
         class = "dropdown",
         tags$a(href = 'https://shinyapps.science.psu.edu/',
-               icon("home")
+               icon("house")
         )
       )
     ),
@@ -34,10 +34,11 @@ ui <- list(
       width = 250,
       sidebarMenu(
         id = "pages",
-        menuItem("Overview", tabName = "overview", icon = icon("tachometer-alt")),
+        menuItem("Overview", tabName = "overview", icon = icon("gauge-high")),
         menuItem("Prerequisites", tabName = "prerequisites", icon = icon("book")),
+        menuItem("Example", tabName = "example", icon = icon("book-open-reader")),
         menuItem("Explore", tabName = "explore", icon = icon("wpexplorer")),
-        menuItem("Challenge", tabName = "challenge", icon = icon("cogs")),
+        menuItem("Challenge", tabName = "challenge", icon = icon("gears")),
         menuItem("Game", tabName = "game", icon = icon("gamepad")),
         menuItem("Wizard", tabName = "wizard", icon = icon("hat-wizard")),
         menuItem("References", tabName = "references", icon = icon("leanpub"))
@@ -95,7 +96,7 @@ ui <- list(
             citeApp(),
             br(),
             br(),
-            div(class = "updated", "Last Update: 5/19/2022 by NJH.")
+            div(class = "updated", "Last Update: 11/8/2022 by NJH.")
           )
         ),
         #### Set up the Prerequisites Page ----
@@ -235,6 +236,7 @@ server <- function(input, output, session) {
       )
     }
   )
+
 
 }
 
