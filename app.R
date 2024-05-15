@@ -17,7 +17,7 @@ ui <- list(
     dashboardHeader(
       title = "App Template", # You may use a shortened form of the title here
       titleWidth = 250,
-      tags$li(class = "dropdown", actionLink("info", icon("info"))),
+      tags$li(class = "dropdown", actionLink("info", icon(class = "fa-solid", name = "comments"))),
       tags$li(
         class = "dropdown",
         boastUtils::surveyLink(name = "App_Template")
